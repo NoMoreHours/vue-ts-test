@@ -33,5 +33,5 @@ Please ntoe: The code is not well written and have a lot of improvement potentia
 ### How to proceed with the test
 - fork the code into your own Github repository
 - commit changes similar to how you would do on normal team
-- write a README.md file that presents your solutions including potential assumptions, documentation etc.
+- write a README.md file that presents your solutions including potential assumptions, documentation. The README must also include a list of "what you would do if you had more time"
 - once "ready to share" provide access to the repository to klaus1993@live.com and write a short email to klaus.andrade@nomorehours.com
