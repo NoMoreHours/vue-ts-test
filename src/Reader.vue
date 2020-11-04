@@ -11,7 +11,7 @@
         v-for="(article, index) in toRead"
         :key="index"
         class="bg-gray-200 px-4 py-2 my-2 rounded shadow">
-        <Article :article="article" @mark-article-read="func3(a)" />
+        <Article :article="article" @mark-article-read="func3($event)" />
       </div>
     </div>
       <button class="bg-red-400 text-white py-1 px-3 rounded-full font-bold shadow my-3 "
@@ -39,8 +39,6 @@ export default class Reader extends Vue {
 
   toRead = []
 
-  selectedArticle = null
-
   get readingStatus() {
     if (this.alreadyRead.length === 0 && this.toRead.length === 0) return 'Add something to read to get the show started';
     if (this.alreadyRead.length > 0 && this.toRead.length === 0) return 'Was that it? Add more below';
@@ -67,17 +65,6 @@ export default class Reader extends Vue {
     } catch (error) {
       // eslint-disable-next-line no-alert
       alert(error);
-    }
-  }
-
-  func1(article) {
-    this.selectedArticle = article;
-    return this.selectedArticle;
-  }
-
-  func2(article) {
-    if (this.selectedArticle.title === article.title) {
-      this.selectedArticle = null;
     }
   }
 

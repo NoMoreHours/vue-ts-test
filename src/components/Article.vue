@@ -1,8 +1,8 @@
 <template>
   <div class="article">
     <div
-          @mouseenter="func1(article)"
-          @mouseleave="func2(article)">
+          @mouseenter="hover = true"
+          @mouseleave="hover = false">
       <div class="flex">
         <span class="text-grey-600">
           Name:</span>
@@ -17,7 +17,7 @@
           target="_"
           :href="article.url">Open</a>
       </div>
-      <div v-if="article" class="bg-gray-400 p-4">
+      <div v-if="hover" class="bg-gray-400 p-4">
         Abstract: {{article.abstract}}
       </div>
     </div>
@@ -35,20 +35,11 @@ export default class Article extends Vue {
 
   markedRead = {}
 
+  hover = false
+
   @Emit()
   markArticleRead(a: object) {
     this.markedRead = a;
-  }
-
-  func1(article) {
-    this.selectedArticle = article;
-    return this.selectedArticle;
-  }
-
-  func2(article) {
-    if (this.selectedArticle.title === article.title) {
-      this.selectedArticle = null;
-    }
   }
 }
 </script>
