@@ -1,4 +1,4 @@
-## NoMore 2020 Vue / JS developer code test
+## NoMore 2020 Front-end OR FullStack developer test
 ### Introduction
 These tests centers around a small simple Vue application. The app is very simple and in many ways poorly written (we wrote it in 60 min with this aim in mind). 
 Think of this as a PR from a junior intern who just started using Vue :) 
